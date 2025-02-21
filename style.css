@@ -1,10 +1,156 @@
-body{
-    padding: 0;
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
 }
 
-.root{
-    width: 100vw;
-    height: 100vh;
-    background-color: red;
+body {
+  background-color: #0a1930;
+  color: white;
+}
+
+/* Navigation */
+.navbar {
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  background: rgba(10, 25, 48, 0.95);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  color: #00d9ff;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00d9ff;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(10, 25, 48, 0.8), rgba(10, 25, 48, 0.8)),
+    url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6")
+      center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background: #00d9ff;
+  color: #0a1930;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+  padding: 100px 50px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card h3 {
+  color: #00d9ff;
+  margin-bottom: 15px;
+}
+
+/* About Section */
+.about {
+  padding: 100px 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.about-content {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  background: #071020;
+  padding: 50px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .services {
+    padding: 50px 20px;
+  }
 }
