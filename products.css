@@ -1,0 +1,230 @@
+/* Complete CSS for Products Page */
+:root {
+  --primary-color: #2a4365;
+  --accent-color: #48bb78;
+  --text-dark: #2d3748;
+  --text-light: #718096;
+  --background-light: #f7fafc;
+  --border-color: #e2e8f0;
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+}
+
+body {
+  font-size: 1rem;
+}
+
+.navbar {
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  background: rgba(10, 25, 48, 0.95);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  color: #00d9ff;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00d9ff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Products Header */
+.products-header {
+  background: linear-gradient(135deg, var(--primary-color), #1a365d);
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.products-header p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #cbd5e0;
+}
+
+/* Products Section */
+.products-section {
+  padding: 80px 0;
+  background: var(--background-light);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Badge */
+.product-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Product Icon */
+.product-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Product Content */
+.product-card h3 {
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  min-height: 3em; /* Ensures consistent title height */
+}
+
+.product-description {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Features List */
+.product-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.product-features li {
+  padding: 8px 0;
+  color: var(--text-dark);
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.4;
+}
+
+.product-features li::before {
+  content: "\f00c"; /* Font Awesome check */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Product Button */
+.product-card .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  width: 100%;
+  border: 2px solid transparent;
+  font-weight: 600;
+}
+
+.product-card .btn:hover {
+  background: white;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+footer {
+  background: #071020;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .products-header h1 {
+    font-size: 2rem;
+  }
+
+  .products-header p {
+    font-size: 1rem;
+  }
+
+  .product-card {
+    padding: 20px;
+  }
+
+  .product-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .product-icon {
+    font-size: 2rem;
+  }
+}
