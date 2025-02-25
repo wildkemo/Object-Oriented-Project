@@ -9,8 +9,8 @@ function goToHome(){
   window.location.href = "index.html";
 }
 
-function goToProducs(){
-  window.location.href = "products.html";
+function goToRequest(){
+  window.location.href = "request.html";
 }
 
 function goToAbout(){

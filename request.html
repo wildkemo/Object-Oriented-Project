@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - Strategy Solutions</title>
+    <title>Requesting Service - Strategy Solutions</title>
     <link rel="stylesheet" href="request.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -29,13 +29,33 @@
         <div class="container">
             <form id="service-form">
                 <div class="form-group">
-                    <label >Choose from the following services:</label>
                     <ul>
-                        <li><input type="radio" name="service" value="Cloud Solutions"> Cloud Solutions</li>
-                        <li><input type="radio" name="service" value="Cybersecurity"> Cybersecurity</li>
-                        <li><input type="radio" name="service" value="IT Consulting"> IT Consulting</li>
-                        
+                        <li>
+                            <h3 id="choose">Choose from the following services:</h3>
+                        </li>
+                            <select id="service-type" name="service-type" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="Consulting">Consulting</option>
+                                <option value="Cloud Solutions">Cloud Solutions</option>
+                                <option value="Cybersecurity">Cybersecurity</option>
+                                <option value="IT Consulting">IT Consulting</option>
+                                <option value="AI & Automation">AI & Automation</option>
+                                <option value="Data Analytics">Data Analytics</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        <li>
+                                
+                            <h3>Requested Service Details:</h3>
+                            <textarea id="service-details" name="service-details" rows="4" cols="50" required placeholder="Provide a briefly explanation" aria-required="true"></textarea>
+                        </li>
+                        <li>
+                            <h3>Service Date:</h3>
+                            <input type="date" id="service-date" name="service-date" required>
+                        </li
                     </ul>
+                </div>
+            </form>
+            
     <footer id="contact">
         <p>Contact us: contact@techsolutions.com</p>
         <p>© 2023 Strategyolutions. All rights reserved.</p>
